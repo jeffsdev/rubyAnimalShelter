@@ -27,6 +27,11 @@ class Customer
     customers
   end
 
+  def save
+    result = DB.exec("INSERT INTO customers (name, phone, animal_type_pref, breed_preference) VALUES ('#{@name}', '#{@phone}', '#{@animal_type_pref}', '#{@breed_preference}') RETURNING id;")
+    @id = result.first().fetch("id").to_i()
+  end
+
   def ==(another_customer)
     self.name().==(another_customer.name()).&(self.id().==(another_customer.id()))
   end
