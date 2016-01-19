@@ -3,7 +3,7 @@ class Customer
 
   def initialize(attributes)
     @name = attributes.fetch(:name)
-    @phone = attributes.fetch(:animal_type_pref)
+    @phone = attributes.fetch(:phone)
     @animal_type_pref = attributes.fetch(:animal_type_pref)
     @breed_preference = attributes.fetch(:breed_preference)
     @id = attributes.fetch(:id)
