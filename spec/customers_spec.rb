@@ -7,7 +7,6 @@ describe(Customer) do
     end
   end
 
-
   describe("#name, #phone, #animal_type_pref, #breed_preference") do
     it("tells you customer information") do
       customer1 = Customer.new({name: 'fenwick',
@@ -61,5 +60,34 @@ describe(Customer) do
       expect(customer.id()).to(be_an_instance_of(Fixnum))
     end
   end
+
+
+
+
+  describe('.filter') do
+    it('filters customers by breed_preference alphabetically') do
+      customer1 = Customer.new({name: 'Dave',
+                                phone: 5551234,
+                                animal_type_pref: 'dog',
+                                breed_preference: 'dachshund',
+                                id: nil})
+      customer1.save
+      customer2 = Customer.new({name: 'Karen',
+                                phone: 5551234,
+                                animal_type_pref: 'cat',
+                                breed_preference: 'normal',
+                                id: nil})
+     customer2.save
+     customer3 = Customer.new({name: 'Hamlet',
+                               phone: 5551234,
+                               animal_type_pref: 'dog',
+                               breed_preference: 'dachshund',
+                               id: nil})
+      customer3.save
+      expect(Customer.filter("breed_preference", "dachshund")).to(eq([customer1, customer3]))
+    end
+  end
+
+
 
 end
