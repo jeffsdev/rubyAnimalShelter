@@ -1,0 +1,12 @@
+<h1>CUSTOMERS</h1>
+
+<h3>List of customers:</h3>
+<ul>
+  <% @customers.each() do |customer| %>
+    <li><%= customer.name() %></li>
+    <li><%= customer.phone() %></li>
+    <li><%= customer.animal_type_pref() %></li>
+    <li><%= customer.breed_preference() %></li>
+    <br>
+  <% end %>
+</ul>

@@ -1,0 +1,14 @@
+<h1>ANIMALS</h1>
+
+<h3>List of animals:</h3>
+<ul>
+  <% @animals.each() do |animal| %>
+    <li><%= animal.name() %></li>
+    <li><%= animal.gender() %></li>
+    <li><%= animal.breed() %></li>
+    <li><%= animal.admittance_date() %></li>
+    <li><%= animal.type() %></li>
+    <li>Customer ID: <%= animal.customer_id() %></li>
+    <br>
+  <% end %>
+</ul>
