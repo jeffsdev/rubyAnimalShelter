@@ -3,10 +3,10 @@
 #### By Jeff Seymour, Riley Starnes
 
 ## Description
-A program for an animal shelter that tracks the animals needing homes and potential owners that have come to look at particular animals.
+A program for an animal shelter that tracks the animals needing homes and potential owners that have come to look at particular animals.  Exploring object-oriented Ruby and databases.
 
 ## Technologies Used
-HTML, CSS, Ruby, RSpec, Capybara, Sinatra
+HTML, CSS, Ruby, RSpec, Capybara, Sinatra, PostgreSQL
 
 ## Setup
 Clone repository  
